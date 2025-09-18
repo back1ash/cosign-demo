@@ -11,11 +11,11 @@ env:
 jobs:
   build-sign:
     runs-on: ubuntu-latest
-    
+
     permissions:
       contents: read
       id-token: write
-      package: write
+      packages: write
 
     steps:
       - uses: actions/checkout@v3
