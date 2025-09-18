@@ -8,7 +8,7 @@ on:
 env:
   IMAGE: ghcr.io/${{ github.repository }}:sha-${{ github.sha }}
 
-job:
+jobs:
   build-sign:
   runs-on: ubuntu-latest
 
