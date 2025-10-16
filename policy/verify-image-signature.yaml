@@ -13,7 +13,7 @@ spec:
             - Pod
       verifyImages:
         - imageReferences:
-            - "ghcr.io/back1ash/hello-slsa*"
+            - "ghcr.io/back1ash/cosign-demo*"
           required: true
           verifyDigest: true
           attestors:
