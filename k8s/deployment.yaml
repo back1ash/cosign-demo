@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: app
-          image: ghcr.io/back1ash/cosign-demo:sha-3c207cc59e6474c8268146ed9b912b5f042ebd70
+          image: ghcr.io/back1ash/cosign-demo:sha-50a159c475e053f9df1d6fe76253a43a51c299a6
           ports:
             - containerPort: 8080 
