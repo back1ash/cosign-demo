@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: app
-          image: ghcr.io/back1ash/hello-slsa:v1
+          image: ghcr.io/back1ash/cosign-demo:sha-3c207cc59e6474c8268146ed9b912b5f042ebd70
           ports:
             - containerPort: 8080 
