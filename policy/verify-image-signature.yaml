@@ -1,0 +1,25 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: verify-signed-images
+spec:
+  validationFailureAction: Enforce
+  background: false
+  rules:
+    - name: check-signature
+      match:
+        resources:
+          kinds:
+            - Pod
+      verifyImages:
+        - imageReferences:
+            - "back1ash/cosign-demo*"
+          required: true
+          verifyDigest: true
+          attestors:
+            - entries:
+                - keyless:
+                    rekor:
+                      url: https://rekor.sigstore.dev
+                    issuer: "https://token.actions.githubusercontent.com"
+                    subject: "https://github.com/back1ash/cosign-demo/.github/workflows/build_and_sign.yaml@refs/heads/main"
